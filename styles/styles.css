@@ -1,0 +1,235 @@
+body{
+  font-family: Arial, sans-serif;
+  fotn-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #E4E8E6;
+}
+
+/* all divs with class container */
+/*global */
+.container{
+  width: 80%; /* Makes it responsive */
+  margin:auto; /* moves all the divs with container class to the middle */
+  overflow: hidden; /* if smth is outside of div, the content will be hidden */
+}
+
+ul{
+  padding: 0; /*by default, unordered list have padding, we want to make sure its default */
+  margin: 0;
+}
+
+.button1 {
+  height: 38px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #000000;
+  background-color:#c3073f;
+}
+
+.dark{
+  padding: 15px;
+  background: #1a1a1d;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+/*local */
+
+/* POSITIONING HEADER */
+
+header{
+  background-color:#1a1a1d;  /*background color */
+  color: #ffffff; /*text color */
+  min-height: 70px; /* Makes it responsive. When the screen is smaller the text is being adjust. */
+  padding-top: 30px; /* padding from the top of of the page */
+  border-bottom: #c3073f 3px solid;
+}
+
+header a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none; /* no line under text */
+  font-size: 16px;
+}
+
+/* positioning nav bar elements horizontally */
+header li{
+  float: left; /* changes the position of items to horizontally */
+  display:inline;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+header #headerName{ /* floats the header name to left */
+  float:left;
+}
+
+header #headerName h1 {
+  margin: 0; /* header name h1 does not have margin */
+
+}
+
+header nav{
+  float: right; /* floats the nav bar to right */
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+/* changes the current a link color and the main text of the header class */
+header .headerText, header .current a {
+  color:#c3073f;
+  font-weight: bold;
+}
+
+/* when the mouse is hovered on nav bar a elements, the color is changed */
+header a:hover{
+  font-weight: bold;
+  color:#c3073f;
+}
+
+
+#showcase {
+  min-height: 400px;
+  background:url("../images/sectionBigImage.jpg");
+  background-position: center; /*centers an image */
+  background-size: cover; /*covers full container */
+  background-repeat: no-repeat;
+}
+
+#showcase h1{
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: bold;
+}
+
+#showcase p{
+  color: #ffffff;
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  font-weight: bold;
+}
+
+#newsleter
+{
+  padding: 15px;
+  background-color:#1a1a1d;
+}
+
+#newsleter h1{
+  float: left;
+  color: #c3073f;
+}
+
+#newsleter form{
+  margin-top: 15px;
+  float: right;
+}
+
+#newsleter input[type="email"]{
+  padding: 4px;
+  height: 27px;
+  width: 250px;
+}
+
+/* BOXES */
+
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left;
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+}
+
+
+#boxes .box img {
+  width: 100px;
+}
+
+#sidebar{
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+#main-col{
+  float: left;
+  width: 65%;
+}
+
+#sidebar .quote input, #sidebar .quote textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+#services > li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background-color: #D2D0D0;
+}
+
+footer {
+  text-align: center;
+  background-color: #1a1a1d;
+  margin-top: 120px;
+  padding: 15px;
+}
+
+footer p{
+  color: #c3073f;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 1000px){
+  header #headerName,
+  header nav,
+  header nav li,
+  #newsleter h1,
+  #newsleter form,
+  #boxes .box,
+  #main-col,
+  #sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .osList, .osListWin{
+    text-align: left;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+  }
+  /*change the newsletter sizes */
+
+  #newsleter button{
+    display:block;
+    width: 100%;
+  }
+
+  #newsleter form input[type="email"]{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+
+}
